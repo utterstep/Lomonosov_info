@@ -21,9 +21,7 @@ def main(anna):
     dictionary_temp = regexp.split(anna)
     words4_temp = []
     freq_dict = {}
-    for word in dictionary_temp:
-        if len(word) == 4:
-            words4_temp.append(word)
+    words4_temp = filter(dictionary_temp, lambda x: len(x) == 4)
     del dictionary_temp
     yo_regex = re.compile(ur'[\u0401\u0451]')
     for word in words4_temp:
